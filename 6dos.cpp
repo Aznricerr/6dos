@@ -21,7 +21,8 @@ ostream& operator <<(ostream &out, Entry e){
     cout << e.name;
 }
 
-//generate individual names. Pass as reference void name_generator(int name_length, vector<Entry> *names_list, int index){
+//generate individual names. Pass as reference 
+void name_generator(int name_length, vector<Entry> *names_list, int index){
     //chose from this list of letters
     static const char alphanum[] = 
     "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -44,7 +45,8 @@ void get_time(clock_t tStart){
     double diff((double)tEnd-(double)tStart);
     cout << "Time to run: " << diff/CLOCKS_PER_SEC << " seconds." << endl; }
 
-//used to print chain of people that connects start name and target name void print_chain(vector<Entry> index_people, vector<vector<Entry>> follow_list, int follow_num){
+//used to print chain of people that connects start name and target name 
+void print_chain(vector<Entry> index_people, vector<vector<Entry>> follow_list, int follow_num){
          cout << endl;
          cout << "Printing chain..." << endl;
          for(int p = 0; p < index_people.size(); p++){
